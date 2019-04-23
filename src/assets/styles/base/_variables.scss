@@ -1,0 +1,102 @@
+// breakpoints
+$grid-breakpoints: (
+    xxxs: 320px,
+    xxs: 360px,
+    xs: 481px,
+    sm: 768px,
+    smplus: 769px,
+    md: 992px,
+    lg: 1025px,
+    xl: 1200px
+); 
+
+// fonts
+$font-weight: (
+    light: 300,
+    regular: 400,
+    medium: 500,
+    bold: 700,
+    heavy: 900
+);
+
+$fonts: (
+    main: ("Helvetica",sans-serif),
+    kingscalson: ("KingsCalsonItalic",Arial,sans-serif),
+    icomoon: ('icomoon'),
+    fontawesome: ('Fontawesome'),
+    arial: ('Arial'),
+    helvelticaBold: ('Helvetica-bold'),
+    helvelticaRegular: ('Helvetica-Regular')
+);
+
+$font-main: fonts(main);
+$font-helvelticaBold: fonts(helvelticaBold);
+$font-helvelticaRegular: fonts(helvelticaRegular);
+$font-kingscalson: fonts(kingscalson);
+$font-icomoon: fonts(icomoon);
+$font-fontawesome: fonts(fontawesome);
+$font-arial: fonts(arial);
+$font-icomoon: fonts(icomoon);
+
+$fontweight-light: fontWeight(light);
+$fontweight-regular: fontWeight(regular);
+$fontweight-medium: fontWeight(medium);
+$fontweight-bold: fontWeight(bold);
+$fontweight-heavy: fontWeight(heavy);
+
+$fz-root: 62.5%; // root font-size, DO NOT CHANGE
+$gutter: 2rem;
+$gutter-xs: 1.5rem;
+$gutter-md: 2rem;
+$container: 75.9%;
+
+// colors
+$colors: (
+    c-white: #fff,
+    c-white-blur: #f5f6f7,
+    c-blue: #0089ce,
+    c-dark-blue: #003b59,
+    c-dark-blue-navy: #00052e,
+    c-dark-blue-navy-1: #021b4b,
+    c-dark-blue-navy-2: #02215c,
+    c-pink: #ff566b,
+    c-black: #000000,
+    c-yellow: #f8b62d,
+    c-gray: #e5ebee,
+    c-gray-1: #ddd,
+    c-pink-light: #EBCCD1,
+    c-brown: #b5a191,
+    c-red: #A94442,
+    bg-color: #010f2a,
+    text-color: #010f2a,
+    text-color-footer: #b5a191
+);
+// // main-colors:
+$text-color: color(text-color);
+$text-color-footer: color(text-color-footer);
+$bg-color: color(bg-color);
+$bg-color-primary: color(c-blue);
+$bg-color-primary-white: color(c-white);
+$bg-color-dark-blue-navy: color(c-dark-blue-navy);
+$bg-color-dark-blue-navy-1: color(c-dark-blue-navy-1);
+$bg-color-dark-blue-navy-2: color(c-dark-blue-navy-2);
+$bg-color-primary-pink: color(c-pink);
+$bg-color-black: color(c-black);
+$bg-color-white-blur: color(c-white-blur);
+$border-color-gray: color(c-gray);
+$border-color-blue: color(c-blue);
+
+$text-color-primary: color(c-dark-blue);
+$text-color-secondary: color(c-white);
+$text-color-black: color(c-black);
+$text-color-blue: color(c-blue);
+$text-color-gray-blur: color(c-gray-blur);
+
+$page-border-radius: .3rem;
+$btn-bg-color-primary: color(c-yellow);
+
+$btn-text-color-primary: color(c-dark-blue-navy);
+
+$header-border-color: color(c-gray);
+
+$border-line-solid: 0.1rem solid rgba(0, 59, 89, 0.15);

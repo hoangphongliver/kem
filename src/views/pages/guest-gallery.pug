@@ -1,0 +1,19 @@
+extends ../layouts/master.pug
+
+block title
+  title Guest-Gallery - home
+
+block basicSeo
+  meta(name='description' content='Gallery page')
+  meta(name='keywords', content='Gallery, page')
+  meta(name='author' content='')
+
+
+block banner-wrapper-inside-page
+  .banner-wrapper-inside-page
+    .banner-wrapper-content
+      img(src="../../assets/images/header/banner-header-page-galley.jpg", alt="Banner Header")
+block content
+    include ../components/gallerypage/showus/showus.pug
+    include ../components/gallerypage/olapic-wall/olapic-wall.pug
+  

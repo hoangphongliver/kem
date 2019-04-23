@@ -1,0 +1,337 @@
+$fontsize: 18px;
+$color_ex: #010f2a;
+$height_hotels_des: 550px;
+@mixin max-xl {
+  @media screen and (max-width: #{breakpoints(xl)}) {
+    @content;
+  }
+}
+@mixin max-md {
+  @media screen and (max-width: #{breakpoints(md)}) {
+    @content;
+  }
+}
+@mixin button {
+  button {
+    &::before {
+      font-size: 80px;
+      color: rgba(255, 255, 255, 0.6);
+      opacity: 0.6;
+      display: block;
+      background-color: white;
+      border-radius: 50%;
+    }
+    &:hover::before {
+      color: white;
+      opacity: 0.8;
+    }
+  }
+}
+@mixin before_after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 12px;
+  background: $text-color-footer;
+  @include mobile{
+    width: 80%;
+  }
+}
+.explore {
+  background: #f3f3f3 !important;
+  @include device {
+    background: white !important;
+  }
+  .country {
+    text-align: center;
+    color: #010f2a;
+    h3 {
+      font-size: $fontsize;
+      font-weight: 300;
+      letter-spacing: 5px;
+      margin-bottom: 10px;
+      visibility: visible;
+      padding-top: 36px;
+    }
+    span {
+      position: relative;
+      font-family: $font-kingscalson;
+      font-size: $fontsize;
+      padding: 0 16px;
+      &::before {
+        @include before_after;
+        left: -142px;
+        @include mobile{
+          left: -110px;
+        }
+      }
+      &::after {
+        @include before_after;
+        right: -142px;
+        @include mobile{
+          right: -110px;
+        }
+      }
+    }
+  }
+  .select_countries {
+    position: relative;
+    margin-top: 55px;
+    height: 70px;
+    .country_name {
+      margin-bottom: 0;
+      text-align: center;
+      z-index: 1;
+      ul {
+        display: none !important;
+      }
+      > .slick-prev {
+        left: 20px;
+        top: 420%;
+        opacity: 0;
+        z-index: 1;
+        @include mobile{
+          opacity: 1;
+          top: 370% !important;
+        }
+        @include max-md{
+          opacity: 1;
+          top: 420%;
+        }
+      }
+      > .slick-next {
+        right: 80px;
+        top: 420%;
+        opacity: 0;
+        z-index: 1;
+        @include mobile{
+          right: 70px;
+          top: 370% !important;
+        }
+        @include max-md{
+          opacity: 1;
+          top: 420%;
+        }
+      }
+      @include button;
+      .slick-slide {
+        position: relative;
+        height: 70px;
+        .name {
+          max-width: 228px;
+          line-height: 17px;
+          a {
+            text-transform: uppercase;
+            font-size: 12px;
+            color: black;
+            letter-spacing: 4px;
+            cursor: pointer;
+            max-width: 230px;
+            line-height: 1.428571429;
+          }
+          span {
+            position: absolute;
+            background: url(https://www.kempinski.com/images/spritesheet_v2.png);
+            background-position: -348px -62px;
+            width: 16px;
+            height: 20px;
+            top: 40px;
+            left: 48%;
+            display: none;
+          }
+        }
+      }
+      .slick-slide.slick-current {
+        span {
+          display: inline-block;
+        }
+      }
+    }
+  }
+  .bg_filter {
+    position: absolute;
+    top: 40px;
+    img {
+      width: 100%;
+      height: 25px;
+    }
+    .bg_left {
+      width: 300px;
+      height: 50px;
+      position: absolute;
+      left: 0;
+      top: -40px;
+      z-index: 10;
+      @include max-xl {
+        width: 100px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .bg_right {
+      width: 300px;
+      height: 50px;
+      position: absolute;
+      right: 0;
+      top: -40px;
+      z-index: 10;
+      @include max-xl {
+        width: 100px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .hotels_des {
+    height: $height_hotels_des;
+    margin-bottom: 25px;
+    z-index: 0;
+    overflow: hidden;
+    @include device {
+      height: auto;
+    }
+    .hotel_des {
+      position: relative;
+      .single_slide {
+        &:hover {
+          .slick-next {
+            opacity: 1;
+            @include max-md{
+              display: none;
+            }
+            @include mobile{
+              display: none;
+            }
+          }
+          .slick-prev {
+            opacity: 1;
+            @include max-md{
+              display: none;
+            }
+            @include mobile{
+              display: none;
+            }
+          }
+        }
+        @include button;
+        .slick-prev {
+          top: 40%;
+          left: 20px;
+          z-index: 999;
+          opacity: 0;
+          @include mobile {
+            top: 25%;
+            opacity: 0;
+          }
+          @include device{
+            top: 25%;
+          }
+          @include max-md{
+            top: 25%;
+            opacity: 0;
+          }
+        }
+        .slick-next {
+          top: 40%;
+          right: 70px;
+          z-index: 999;
+          opacity: 0;
+          @include max-md{
+            top: 25%;
+            opacity: 0;
+          }
+          @include device{
+            top: 25%;
+          }
+          @include mobile {
+            top: 25% ;
+            opacity: 0;
+          }
+        }
+      }
+      .img {
+        width: 100%;
+        height: $height_hotels_des;
+        @include mobile{
+           height: 400px;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .containerr {
+        margin: 0 auto;
+        width: 1170px !important;
+        padding-left: 30px;
+        display: block;
+        @include device {
+          width: 970px !important;
+          word-wrap: break-word;
+          padding-left: 0;
+        }
+        @include max-md {
+          width: 750px !important;
+          padding-left: 0;
+        }
+        @include mobile {
+          width: auto !important;
+          padding-left: 0px;
+        }
+        .hotel_info {
+          position: absolute;
+          z-index: 999;
+          width: 620px;
+          height: 450px;
+          top: 100px;
+          background: white;
+          @include device {
+            position: inherit;
+            width: 100%;
+          }
+          .hotel_mg {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            .hotel_info_padding {
+              padding: 38px 22px 0px 22px;
+              h4 {
+                color: $color_ex;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+              }
+              p {
+                color: $color_ex;
+                font-size: 13px;
+                margin-top: 10px;
+                margin-bottom: 13px;
+                word-wrap: break-word;
+              }
+              a {
+                color: $color_ex;
+                font-size: 11px;
+                font-weight: bold;
+                font-family: $font-main;
+                position: absolute;
+                bottom: 0;
+                left: 20px;
+                padding: 3px 10px;
+                border: 2px solid $text-color-footer;
+                &:hover {
+                  transition: all 0.3s;
+                  background: $text-color-footer;
+                  color: white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

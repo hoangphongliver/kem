@@ -1,0 +1,34 @@
+/*
+  EN font
+*/
+@import './base/font-language/en-EN';
+@import './base/_functions';
+@import './base/_variables';
+@import './base/_mixins';
+@import '../../../node_modules/slick-carousel/slick/slick.css';
+@import '../../../node_modules/slick-carousel/slick/slick-theme.scss';
+@import './base/_fonts';
+@import '../../../node_modules/slick-carousel/slick/slick.css';
+@import '../../../node_modules/slick-carousel/slick/slick-theme.scss';
+@import '../../../node_modules/select2/dist/css/select2.min.css';
+@import '../../../node_modules/mapbox-gl/dist/mapbox-gl.css';
+@import '../../../node_modules/pikaday/css/pikaday.css';
+@import './base/animate.css';
+@import './base/jquery.fancybox.min.css';
+@import './base/_global';
+@import './base/_flexboxgrid';
+@import './base/_lazyload';
+
+// Component
+@import '../../views/components/homepage/explore/explore';
+@import '../../views/components/header/header';
+@import '../../views/components/gallerypage/showus/showus';
+@import '../../views/components/gallerypage/olapic-wall/olapic-wall';
+@import '../../views/components/homepage/introducePage/introduce';
+@import '../../views/components/homepage/mapbox/mapbox';
+@import '../../views/components/footer/footer';
+@import '../../views/components/homepage/experiences/experiences';
+@import '../../views/components/homepage/gallery/gallery';
+@import '../../views/components/homepage/specialoffers/specialoffers';
+@import '../../views/components/specialoffers/specialoffers/specialoffers';
+@import '../../views/components/aboutus/aboutus/aboutus';

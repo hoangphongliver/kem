@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'Helvetica';
+    font-display: swap;
+    src: url('./fonts/Helvetica/Helvetica-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica-bold';
+    font-display: swap;
+    src: url('./fonts/Helvetica/Helvetica-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Helvetica-Regular';
+    font-display: swap;
+    src: url('./fonts/Helvetica/Helvetica-Regular.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KingsCalsonItalic';
+    font-display: swap;
+    src: url('./fonts/KingCalson/KingsCaslon-Italic.ttf') format('truetype'),
+        url('./fonts/KingCalson/KingsCaslon-Italic.eot#iefix') format('embedded-opentype'),
+        url('./fonts/KingCalson/KingsCaslon-Italic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Arial';
+    font-display: swap;
+    src: url('./fonts/Arial/Arial-Regular.ttf') format('truetype');
+    font-style: normal;
+
+}

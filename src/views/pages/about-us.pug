@@ -1,0 +1,16 @@
+extends ../layouts/master.pug
+
+block title
+  title Guest-Gallery - home
+
+block basicSeo
+  meta(name='description' content='About page')
+  meta(name='keywords', content='About, page')
+  meta(name='author' content='')
+
+block banner-wrapper-inside-page
+  .banner-wrapper-inside-page
+    .banner-wrapper-content
+      img(src="../../assets/images/header/banner-header-about-us.jpg", alt="Banner Header")
+block content
+  include ../components/aboutus/aboutus/aboutus.pug

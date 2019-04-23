@@ -1,0 +1,118 @@
+$icomoon-font-family: "icomoon" !default;
+$icomoon-font-path: "fonts" !default;
+
+$icon-location: "\e900";
+$icon-map-marker: "\e900";
+$icon-pin: "\e900";
+$icon-user: "\e901";
+$icon-profile: "\e901";
+$icon-avatar: "\e901";
+$icon-caret-down: "\e902";
+$icon-calendar: "\e903";
+$icon-angle-down: "\e904";
+$icon-phone: "\e905";
+$icon-search: "\e906";
+$icon-magnifier: "\e906";
+$icon-magnifying-glass: "\e906";
+$icon-inspect: "\e906";
+$icon-find: "\e906";
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('./#{$icomoon-font-path}/#{$icomoon-font-family}/#{$icomoon-font-family}.eot?vq4h8');
+  src:  url('./#{$icomoon-font-path}/#{$icomoon-font-family}/#{$icomoon-font-family}.eot?vq4h8#iefix') format('embedded-opentype'),
+    url('./#{$icomoon-font-path}/#{$icomoon-font-family}/#{$icomoon-font-family}.ttf?vq4h8') format('truetype'),
+    url('./#{$icomoon-font-path}/#{$icomoon-font-family}/#{$icomoon-font-family}.woff?vq4h8') format('woff'),
+    url('./#{$icomoon-font-path}/#{$icomoon-font-family}/#{$icomoon-font-family}.svg?vq4h8##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-search {
+  &:before {
+    content: $icon-search; 
+  }
+}
+.icon-magnifier {
+  &:before {
+    content: $icon-magnifier; 
+  }
+}
+.icon-magnifying-glass {
+  &:before {
+    content: $icon-magnifying-glass; 
+  }
+}
+.icon-inspect {
+  &:before {
+    content: $icon-inspect; 
+  }
+}
+.icon-find {
+  &:before {
+    content: $icon-find; 
+  }
+}
+.icon-location {
+  &:after {
+    content: $icon-location; 
+  }
+}
+.icon-map-marker {
+  &:after {
+    content: $icon-map-marker; 
+  }
+}
+.icon-pin {
+  &:after {
+    content: $icon-pin; 
+  }
+}
+.icon-user {
+  &:after {
+    content: $icon-user; 
+  }
+}
+.icon-profile {
+  &:after {
+    content: $icon-profile; 
+  }
+}
+.icon-avatar {
+  &:after {
+    content: $icon-avatar; 
+  }
+}
+.icon-caret-down {
+  &:after {
+    content: $icon-caret-down; 
+  }
+}
+.icon-calendar {
+  &:after {
+    content: $icon-calendar; 
+  }
+}
+.icon-angle-down {
+  &:after {
+    content: $icon-angle-down; 
+  }
+}
+.icon-phone {
+  &:before {
+    content: $icon-phone; 
+  }
+}

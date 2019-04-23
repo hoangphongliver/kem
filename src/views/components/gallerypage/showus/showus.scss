@@ -1,0 +1,135 @@
+@mixin li_before {
+  &::before {
+    content: "/";
+    color: #ccc;
+    padding: 0 5px;
+  }
+}
+@mixin before_after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 130px;
+  top: 10px;
+  background: $text-color-footer;
+}
+.showus {
+  width: 100%;
+  .container {
+    width: 1170px;
+    margin: auto;
+    @include max-xl {
+      width: 970px;
+    }
+    @include max-md {
+      width: 750px;
+    }
+    @include mobile {
+      width: auto;
+    }
+  }
+  .showus-top {
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ecedeb;
+    ul {
+      margin-left: 30px;
+      display: flex;
+      font-size: 10px;
+      @include mobile{
+          margin-left: 10px;
+      }
+      li {
+        padding: 7px 0;
+      }
+      .clock {
+        margin-top: 10px;
+        width: 15px;
+        height: 15px;
+        display: inline-block;
+        vertical-align: middle;
+        background-image: url(https://www.kempinski.com/images/icon/breadcrumb.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        -ms-background-size: cover;
+        background-size: cover;
+      }
+      .home {
+        @include li_before;
+        a {
+          font-size: 10px;
+          color: #b5a191;
+        }
+      }
+      .show {
+        @include li_before;
+        color: $bg-color;
+      }
+    }
+  }
+  .showus-main {
+    text-align: center;
+    background-color: #f8f8f6;
+    h1 {
+      font-size: 20px;
+      color: #010f2a;
+      letter-spacing: 5px;
+      line-height: 1.44;
+      font-weight: 300;
+      margin: 0 0 10px 0;
+      padding-top: 30px;
+    }
+    .sub-title {
+      position: relative;
+    //   min-width: 413px;
+      .line{
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        height: 1px;
+        background: #b5a191;
+        left: 0;
+      }
+      span {
+        font-family: $font-kingscalson;
+        font-size: 18px;
+        position: relative;
+        color: #010f2a;
+        white-space: initial;
+        background: #f8f8f6;
+        padding: 0 10px;
+        // &::before {
+        //   left: -160px;
+        //   @include before_after;
+        //   @include max-md {
+        //     width: 50px;
+        //     left: -60px;
+        //   }
+        //   @include mobile {
+        //     width: 30px;
+        //     left: -60px;
+        //   }
+        // }
+        // &::after {
+        //   right: -160px;
+        //   @include before_after;
+        //   @include max-md {
+        //     width: 50px;
+        //     right: -60px;
+        //   }
+        //   @include mobile {
+        //     width: 30px;
+        //     right: -60px;
+        //   }
+        // }
+      }
+    }
+    p {
+      margin-top: 18px;
+      font-size: 10px;
+      color: #010f2a;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      padding-bottom: 30px;
+    }
+  }
+}

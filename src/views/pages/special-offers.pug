@@ -1,0 +1,19 @@
+extends ../layouts/master.pug
+
+block title
+  title Page - Specialoffers
+
+block basicSeo
+  meta(name='description' content='home page')
+  meta(name='keywords', content='home, page')
+  meta(name='description' content='Special page')
+  meta(name='keywords', content='Special, page')
+  meta(name='author' content='')
+
+
+block banner-wrapper-inside-page
+  .banner-wrapper-inside-page
+    .banner-wrapper-content
+      img(src="../../assets/images/header/banner-header-special-offers.jpg", alt="Banner Header")
+block content
+  include ../components/specialoffers/specialoffers/specialoffers.pug

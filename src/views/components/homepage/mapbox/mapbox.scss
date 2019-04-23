@@ -1,0 +1,154 @@
+.mapboxgl-map{
+    height: 550px;
+    background: #E5E3DF;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 40px;
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: -100px;
+        border: 100px solid transparent;
+        border-left-color: #fff;
+        border-left-width: 50vw;
+        left: 0;
+        z-index: 9;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -100px;
+        border: 100px solid transparent;
+        border-right-color: #fff;
+        border-right-width: 50vw;
+        right: 0;
+        z-index: 9;
+    }
+    .mapboxgl-control-container{
+        .mapboxgl-ctrl-bottom-left{
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    .marker {
+        background: black;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        cursor: pointer;
+        .mapboxgl-popup {
+            max-width: 200px;
+          }
+    }
+    .mapboxgl-popup{
+        max-width: 600px;
+        .mapboxgl-popup-content{
+            @include mobile{
+                width: 90%;
+                margin: 0 auto;  
+            }
+            @include max-xs{
+                height: 200px;
+                overflow: auto;
+            }
+            .block-info{
+                padding: 15px;
+                .info-title{
+                    margin: 0 0 10px;
+                    font-size: 16px;
+                    letter-spacing: 3px;
+                    text-transform: uppercase;
+                    color: #010F2A;
+                    line-height: 1.1;
+                    font-weight: 300;
+                    font-family: $font-main;
+                }
+                .info-content{
+                    display: flex;
+                    flex-wrap: wrap;
+                    @include max-xs{
+                        flex-direction: column;
+                    }
+                    .img-cover{
+                        width: 240px;
+                        min-width: 240px;
+                        margin-right: 30px;
+                        margin-bottom: 15px;
+                        @include max-xs{
+                            width: 100%;
+                            position: relative;
+                            padding-top: 56.65%;
+                        }
+                        img.avatar{
+                            width: 100%;
+                            @include max-xs{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                    .descripton{
+                        line-height: 1.6;
+                        flex: 1;
+                        @include max-xs{
+                            padding-right: 15px;
+                        }
+                        p{
+                            font-family: $font-arial;
+                            font-size: 12px;
+                            line-height: 1.8;
+                            color: color(c-dark-blue-navy);
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+                .info-contact{
+                    display: flex;
+                    flex-wrap: wrap;
+                    .hotel-contact {
+                        margin-bottom: 0;
+                        flex: 2;
+                        .line{
+                            padding-right: 15px;
+                            font-size: 11px;
+                            margin-bottom: 3px;
+                            display: flex;
+                            span.text{
+                                display: block;
+                                color: color(c-dark-blue-navy);
+                                line-height: 1;
+                                font-family: $font-arial;
+                                margin-left: 10px;
+                            }
+                            span.icon{
+                                color: color(c-dark-blue-navy); 
+                            }
+                        }
+                    }
+                    .hotel-link{
+                        a{
+                            display: inline-block;
+                            font-size: 11px;
+                            padding: 6px 12px;
+                            line-height: 1.428571429;
+                            background: transparent;
+                            border: 2px solid #B5A191;
+                            color: #021843;
+                            border-radius: 0px;
+                            font-family: $font-arial;
+                            font-weight: 700;
+                            transition: all .3s;
+                            &:hover{
+                                background: #B5A191;
+                                color: color(c-white);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

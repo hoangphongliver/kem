@@ -1,0 +1,373 @@
+.page-about{
+    .section-title{
+        padding-top: 35px;
+        background: #F3F3F3;
+        padding-bottom: 55px;
+        margin-bottom: 35px;
+        .text{
+            background: #F3F3F3;
+        }
+    }
+    .section-about-main{
+        margin-bottom: 80px;
+        .container-fluid{
+            @include min-xl{
+                width: 1170px;
+            }
+        }
+        h5{
+            font-family: $font-helvelticaBold;
+            font-size: 13px;
+            margin-bottom: 13px;
+        }
+        p{
+            font-size: 13px;
+            margin-bottom: 13px;
+        }
+    }
+    .explore2 {
+        background: #fff;
+        .country {
+          text-align: center;
+          color: #010f2a;
+          background: #f3f3f3;
+          .sub-child-title{
+            font-size: 10px;
+            letter-spacing: 5px;
+            margin-top: 15px;
+          }
+          h3 {
+            font-size: $fontsize;
+            font-weight: 300;
+            letter-spacing: 5px;
+            margin-bottom: 10px;
+            visibility: visible;
+            padding-top: 36px;
+          }
+          span {
+            position: relative;
+            font-family: $font-kingscalson;
+            font-size: $fontsize;
+            padding: 0 16px;
+            &::before {
+              @include before_after;
+              left: -142px;
+            }
+            &::after {
+              @include before_after;
+              right: -142px;
+            }
+          }
+        }
+        .select_countries {
+          position: relative;
+          height: 90px;
+          margin-bottom: 20px;
+          background: #f3f3f3;
+          margin-top: 0;
+          padding-top: 20px;
+          padding-bottom: 37px;
+          .country_name2 {
+            margin-bottom: 0;
+            text-align: center;
+            z-index: 1;
+            ul {
+              display: none !important;
+            }
+            > .slick-prev {
+              left: 20px;
+              top: 420%;
+              opacity: 0;
+              z-index: 1;
+            }
+            > .slick-next {
+              right: 80px;
+              top: 420%;
+              opacity: 0;
+              z-index: 1;
+            }
+            @include button;
+            .slick-slide {
+              position: relative;
+              height: 70px;
+              .name {
+                max-width: 228px;
+                line-height: 17px;
+                a {
+                  text-transform: uppercase;
+                  font-size: 12px;
+                  color: black;
+                  letter-spacing: 4px;
+                  cursor: pointer;
+                  max-width: 230px;
+                  line-height: 1.428571429;
+                }
+                span {
+                  position: absolute;
+                  background: url(https://www.kempinski.com/images/spritesheet_v2.png);
+                  background-position: -348px -62px;
+                  width: 16px;
+                  height: 20px;
+                  top: 40px;
+                  left: 48%;
+                  display: none;
+                }
+                .circle {
+                  display: inline-block;
+                }
+              }
+              .selected {
+                span {
+                  display: inline-block;
+                }
+              }
+            }
+            .slick-slide.slick-current {
+                span {
+                  display: inline-block;
+                }
+              }
+          }
+        }
+        .bg_filter {
+          position: absolute;
+          top: 60px;
+          img {
+            width: 100%;
+            height: 25px;
+          }
+          .bg_left {
+            width: 300px;
+            height: 50px;
+            position: absolute;
+            left: 0;
+            top: -40px;
+            z-index: 10;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .bg_right {
+            width: 300px;
+            height: 50px;
+            position: absolute;
+            right: 0;
+            top: -40px;
+            z-index: 10;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+        .hotels_des {
+          height: $height_hotels_des;
+          margin-bottom: 25px;
+          z-index: 0;
+          overflow: hidden;
+          .hotel_des {
+            position: relative;
+            .single_slide {
+              &:hover {
+                .slick-next {
+                  opacity: 1;
+                }
+                .slick-prev {
+                  opacity: 1;
+                }
+              }
+              @include button;
+              .slick-prev {
+                top: 40%;
+                left: 20px;
+                z-index: 999;
+                opacity: 0;
+              }
+              .slick-next {
+                top: 40%;
+                right: 80px;
+                z-index: 999;
+                opacity: 0;
+              }
+            }
+            .img {
+              width: 100%;
+              height: $height_hotels_des;
+              img {
+                width: 100%;
+                height: 100%;
+              }
+            }
+            .containerr {
+              margin: 0 auto;
+              width: $container !important;
+              padding-left: 30px;
+              display: block;
+              .hotel_info {
+                position: absolute;
+                z-index: 999;
+                width: 620px;
+                height: 450px;
+                top: 100px;
+                background: white;
+                .hotel_mg {
+                  width: 100%;
+                  height: 100%;
+                  position: relative;
+                  .hotel_info_padding {
+                    padding: 38px 22px 0px 22px;
+                    h4 {
+                      color: $color_ex;
+                      text-transform: uppercase;
+                      letter-spacing: 3px;
+                    }
+                    p {
+                      color: $color_ex;
+                      font-size: 13px;
+                      margin-top: 10px;
+                      margin-bottom: 13px;
+                    }
+                    a {
+                      color: $color_ex;
+                      font-size: 11px;
+                      font-weight: bold;
+                      font-family: $font-main;
+                      position: absolute;
+                      bottom: 0;
+                      left: 20px;
+                      padding: 3px 10px;
+                      border: 2px solid $text-color;
+                      &:hover {
+                        transition: all 0.3s;
+                        background: $text-color;
+                        color: white;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    .experiences{
+        padding: 30px 0;
+        margin-bottom: 35px;
+        .room-slide2{
+            &:hover .slick-prev:before,&:hover .slick-next:before{
+                opacity: 1;
+            }
+            
+            .slick-next:hover:before,.slick-prev:hover:before{
+                background-color: #ffffff82;
+            }
+            .slick-prev:before, .slick-next:before{
+                opacity: 0;
+                color: black;
+                height: 70px;
+                width: 70px;
+                background-color: rgba(255, 255, 255, 0.62);
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-image: url('arrows.png');
+                &:hover{
+                    background: #ffffffa1;
+                }
+            }
+            .slick-next:before{
+                content: '';
+                background-position: 125px -86px;
+            }
+            .slick-prev:before{
+                content: '';
+                background-position: 19px -86px;
+            }
+            .slick-slide{
+                margin: 0 15px;
+                opacity: 0.5;
+                transition: 0.4s;
+            }
+            .slick-slide.slick-center{
+                opacity: 1;
+            }
+                .item.slider-item{
+                    padding: 25px;
+                    background: #F3F3F3;
+                    position: relative;
+                    .slide-image,.slide-caption{
+                        width: 50%;
+                        display: inline-block;
+                        padding-left: 20px;
+                        vertical-align: top;
+                    }
+                    .slide-image{
+                        padding-left: 0;
+                        position: absolute;
+                        height: calc(100% - 50px);
+                        display: inline-block;
+                        vertical-align: top;
+                        left: 25px;
+                        padding-right: 25px;
+                        @include max-xl{
+                            display: block;
+                            width: 100%;
+                            position: static;
+                            padding-right: 0;
+                            max-height: 300px;
+                            overflow: hidden;
+                        }
+                        a{
+                            display: block;
+                            height: 100%;
+                            img{
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                    .slide-caption{
+                        margin-left: 50%;
+                        height: 400px;
+                        @include max-xl{
+                            display: block;
+                            width: 100%;
+                            position: static;
+                            padding-right: 0;
+                            margin-left: 0;
+                            padding-left: 0;
+                        }
+                        .title{
+                            height: 25px;
+                        }
+                        .description{
+                            height: calc(100% - 100px);
+                            overflow: hidden;
+                            position: relative;
+                            @include max-xl{
+                                max-height: 300px;
+                            }
+                            &:after{
+                                content: '';
+                                height: 60px;
+                                position: absolute;
+                                background: linear-gradient(to bottom,rgba(243,243,243,0.2) 0,rgba(243,243,243,0.82) 31%,#f3f3f3 100%);
+                                bottom: 5px;
+                                left: 0;
+                                width: 100%;
+                            }
+                        }
+                        .further-info{
+                            position: absolute;
+                            bottom: 28px;
+                            
+                        }
+                    }
+                }
+                
+        }
+    }
+
+}

@@ -1,0 +1,415 @@
+@mixin max-ip {
+  @media screen and (max-width: 567px) {
+    @content;
+  }
+}
+.olapic-wall {
+  margin-bottom: 100px;
+  .olapic-top {
+    margin-top: 40px;
+    .olapic-button {
+      display: flex;
+      justify-content: center;
+      a {
+        font-size: 13px;
+        padding: 5px 30px;
+        text-align: center;
+        background: #8c8179;
+        color: white;
+        text-transform: uppercase;
+        &::before {
+          content: "\f093";
+          font-family: $font-fontawesome;
+          font-size: 13px;
+          margin-right: 10px;
+        }
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+    .olapic-select {
+      margin-bottom: 15px;
+      @include mobile {
+        margin-top: 30px;
+        margin-bottom: 40px;
+      }
+      display: flex;
+      justify-content: center;
+      .olapic-select-desktop {
+        position: relative;
+        .viewall {
+          display: none;
+          @include mobile {
+            display: block;
+            width: 180px;
+            height: 45px;
+            background: #aea7a1;
+            > a {
+              font-size: 15px;
+              color: #000;
+              background: #aea7a1;
+              position: absolute;
+              top: 10px;
+              left: 30px;
+              &::before {
+                content: "\f0c9";
+                font-family: $font-fontawesome;
+                color: #000;
+                font-size: 20px;
+                margin-right: 15px;
+              }
+            }
+            .change_color {
+              color: white;
+              &::before {
+                color: white;
+              }
+            }
+            &:hover {
+              a {
+                color: white;
+              }
+              a:before {
+                color: white;
+              }
+            }
+          }
+        }
+        .olapic-desktop {
+          display: flex;
+          justify-content: center;
+          @include min-sm {
+            display: flex !important;
+          }
+          @include mobile {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            background: #8c8179;
+            top: 45;
+            width: 100%;
+            left: 0;
+            z-index: 10;
+          }
+          li {
+            cursor: pointer;
+            margin: 30px;
+            @include mobile {
+              margin: 0;
+              text-align: center;
+              padding: 7px 0;
+            }
+            a {
+              font-size: 14px;
+              position: relative;
+              color: #8c8179;
+              font-weight: 500;
+              @include mobile {
+                color: black;
+                font-size: 13px;
+                &::before {
+                  display: none;
+                }
+              }
+              &::before {
+                content: "";
+                position: absolute;
+                left: -26px;
+                top: 0px;
+                width: 16px;
+                height: 16px;
+                border: 1.5px solid #8c8179;
+                background: white;
+              }
+              &:after {
+                content: "";
+                position: absolute;
+                left: -19px;
+                top: 2px;
+                width: 4px;
+                height: 10px;
+                border: solid black;
+                border-width: 0px 2px 2px 0;
+                -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+                display: none;
+              }
+
+              &:hover {
+                // span::after {
+                //   display: block;
+                // }
+                a::before {
+                  border: 1.5px solid $bg-color;
+                }
+                a {
+                  color: $bg-color;
+                }
+              }
+            }
+          }
+          .active {
+            a::after {
+              display: block;
+              @include mobile {
+                display: none;
+              }
+            }
+            a::before {
+              border: 1.5px solid $bg-color;
+            }
+            a {
+              color: $bg-color;
+            }
+          }
+          @include mobile {
+            .active1 {
+              background: #000;
+              a {
+                color: $text-color-footer;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .olapic-main {
+    .container {
+      width: 1200px;
+      margin: 1rem auto;
+      @include max-xl {
+        width: 100%;
+      }
+      @include max-md {
+        width: 100%;
+      }
+      @include mobile {
+        width: 100%;
+      }
+      @include max-ip{
+        width: 60%;
+      }
+      .image-gallery {
+        width: 100%;
+        height: 100%;
+        // display: grid;
+        // grid-template-columns: repeat(12, 1fr);
+        // grid-template-rows: repeat(12, .142fr);
+        // @include max-md{
+        //   grid-template-rows: repeat(18, .13fr);
+        // }
+        // @include mobile{
+        //   grid-template-columns: repeat(1,1fr); 
+        //   grid-template-rows: auto;
+        // }
+        // grid-gap: 1rem;
+        // display: flex;
+        // flex-wrap: wrap;
+        .gallery_item {
+          position: relative;
+          float: left;
+          @include max-ip{
+            float: inherit;
+          }
+          overflow: hidden;
+          margin: 5px;
+          @include mobile{
+            margin: 5px;
+            padding: 0;
+          }
+          img {
+            background: white;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+          }
+          .title {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: -10px;
+            left: 0;
+            display: flex;
+            text-align: center;
+            cursor: pointer;
+            &:hover {
+              display: block;
+              background: rgba(0, 0, 0, 0.3);
+              span {
+                display: block;
+              }
+            }
+            span {
+              display: none;
+              font-size: 1em;
+              font-family: Arial, Helvetica, sans-serif;
+              color: white;
+              text-transform: lowercase;
+              letter-spacing: 1px;
+              margin-top: 45%;
+            }
+          }
+        }
+        .full{
+          width: 24%;
+          height: 300px;
+          @include max-md{
+            width: 48%;
+            height: 450px;
+          }
+          @include mobile{
+            width: 100%;
+            height: 600px;
+          }
+          @include max-ip{
+            width: 100%;
+            height: 280px;
+            margin-bottom: 20px;
+          }
+          // height: 45%;
+        }
+        .notful{
+          width: 24%;
+          height: 300px;
+          @include max-md{
+            width: 48%;
+            height: 450px;
+          }
+          @include mobile{
+            width: 100%;
+            height: 600px;
+          }
+          @include max-ip{
+            width: 100%;
+            height: 280px;
+            margin-bottom: 20px;
+          }
+        }
+        // .gallery-item1 {
+        //   grid-column: 1 / 7;
+        //   grid-row: 1 / 7;
+        //   @include max-md{
+        //     grid-column: 1 / 9;
+        //     grid-row: 1 / 7;
+        //   }
+        // }
+        // .gallery-item2 {
+        //   grid-column-start: 7;
+        //   grid-column-end: 10;
+        //   grid-row-start: 1;
+        //   grid-row-end: 4;
+        //   @include max-md{
+        //     grid-column: 9 / 13;
+        //     grid-row:  1 / 4;
+        //   }
+        // }
+        // .gallery-item3 {
+        //   grid-column-start: 10;
+        //   grid-column-end: 13;
+        //   grid-row-start: 1;
+        //   grid-row-end: 4;
+        //   @include max-md{
+        //     grid-column: 9 / 13;
+        //     grid-row: 4 / 7;
+        //   }
+        // }
+        // .gallery-item4 {
+        //   grid-column-start: 7;
+        //   grid-column-end: 10;
+        //   grid-row-start: 4;
+        //   grid-row-end: 7;
+        //   @include max-md{
+        //     grid-column: 1 / 5;
+        //     grid-row: 7 / 10;
+        //   }
+        // }
+        // .gallery-item5 {
+        //   grid-column-start: 10;
+        //   grid-column-end: 13;
+        //   grid-row-start: 4;
+        //   grid-row-end: 7;
+        //   @include max-md{
+        //     grid-column: 1 / 5;
+        //     grid-row: 10 / 13;
+        //   }
+        // }
+        // .gallery-item6 {
+        //   grid-column-start: 1;
+        //   grid-column-end: 4;
+        //   grid-row-start: 7;
+        //   grid-row-end: 10;
+        //   @include max-md{
+        //     grid-column: 5 / 13;
+        //     grid-row: 7 / 13;
+        //   }
+        // }
+        // .gallery-item7 {
+        //   grid-column-start: 4;
+        //   grid-column-end: 7;
+        //   grid-row-start: 7;
+        //   grid-row-end: 10;
+        //   @include max-md{
+        //     grid-column: 1 / 9;
+        //     grid-row: 13 / 19;
+        //   }
+        // }
+        // .gallery-item8 {
+        //   grid-column-start: 1;
+        //   grid-column-end: 4;
+        //   grid-row-start: 10;
+        //   grid-row-end: 13;
+        //   @include max-md{
+        //     grid-column: 9 / 13;
+        //     grid-row: 13 / 16;
+        //   }
+        // }
+        // .gallery-item9 {
+        //   grid-column-start: 4;
+        //   grid-column-end: 7;
+        //   grid-row-start: 10;
+        //   grid-row-end: 13;
+        //   @include max-md{
+        //     grid-column: 9 / 13;
+        //     grid-row: 16 / 19;
+        //   }
+        // }
+        // .gallery-item10 {
+        //   grid-column-start: 7;
+        //   grid-column-end: 13;
+        //   grid-row-start: 7;
+        //   grid-row-end: 13;
+        //   @include max-md{
+        //     display: none;
+        //   }
+        // }
+      }
+      .copyright{
+        clear: both;
+        margin-top: 7px;
+        float: right;
+        a{
+          font-size: 11px;
+          color: #aea7a1;
+        }
+      }
+    }
+    .olapic-loadmore{
+      clear: both;
+      margin-top: 55px;
+      text-align: center;
+      a{
+        color: white;
+        padding: 7px 40px;
+        background: #8c8179;
+        text-transform: uppercase;
+        font-size: 13px;
+      }
+    }
+  }
+}
+.gallery-slide2{
+  margin-top: -80px;
+}
